@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorioescolas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a3a29108-481e-46d1-8f87-6c353dfa56a6">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     escola.`escola` AS escola_escola,
+     escola.`estado` AS escola_estado,
+     escola.`cidade` AS escola_cidade,
+     escola.`matricula` AS escola_matricula
+FROM
+     `escola` escola]]>
+	</queryString>
+	<field name="escola_escola" class="java.lang.String"/>
+	<field name="escola_estado" class="java.lang.String"/>
+	<field name="escola_cidade" class="java.lang.String"/>
+	<field name="escola_matricula" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
